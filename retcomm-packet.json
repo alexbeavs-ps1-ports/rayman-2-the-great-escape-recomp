@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "rayman-2-the-great-escape-psx",
+  "name": "Rayman 2 - The Great Escape",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "rayman-2-the-great-escape-recomp",
+  "rom_identity": {
+    "crc32": [
+      "f475865e"
+    ],
+    "md5": [
+      "0bac85a7c69a0951c85766dac5a5c23c"
+    ],
+    "sha1": [
+      "671e7930dc4bbe52470e5711feb6f9d4f17ac259"
+    ],
+    "disc_serials": [
+      "SLES-02906"
+    ],
+    "sizes": [
+      699734112
+    ],
+    "filenames": [
+      "Rayman 2 - The Great Escape (Europe) (En,Es,It).cue",
+      "Rayman 2 - The Great Escape (Europe) (En,Es,It) (Track 1).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "disc_fps": [
+      "8f441f5b663d777807b1f0278bc6326cf30c88ee654085aa338d28b953a1c324"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5552.BIN",
+    "profile": "SCPH5552",
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/rayman-2-the-great-escape-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "rayman-2-the-great-escape-*-windows-x64.zip",
+      "linux-x64": "rayman-2-the-great-escape-*-linux-x64.zip",
+      "macos-arm64": "rayman-2-the-great-escape-*-macos-arm64.zip",
+      "macos-x64": "rayman-2-the-great-escape-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "rayman_2_the_great_escape.exe",
+    "linux": "rayman_2_the_great_escape",
+    "macos": "rayman_2_the_great_escape"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/rayman-2-the-great-escape-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

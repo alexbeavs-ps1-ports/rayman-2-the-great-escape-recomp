@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Rayman 2 - The Great Escape",
+    "id": "SLES-02906",
+    "boot_exe": "SLES_029.06"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Rayman 2 - The Great Escape (Europe) (En,Es,It).cue",
+    "bin_name": "Rayman 2 - The Great Escape (Europe) (En,Es,It) (Track 1).bin",
+    "track_counts": [
+      2
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 699734112,
+      "md5": "0bac85a7c69a0951c85766dac5a5c23c",
+      "sha1": "671e7930dc4bbe52470e5711feb6f9d4f17ac259",
+      "crc32": "f475865e"
+    },
+    "disc_fp": "8f441f5b663d777807b1f0278bc6326cf30c88ee654085aa338d28b953a1c324"
+  },
+  "exe": {
+    "load_address": "0x801E4000",
+    "entry_pc": "0x801E99B4",
+    "text_size": "0x00011000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 134,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Rayman 2 - The Great Escape",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "rayman-2-the-great-escape-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SLES-02906"
+  }
+}

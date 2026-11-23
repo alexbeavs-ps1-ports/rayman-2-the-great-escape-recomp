@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Rayman 2 - The Great Escape"
+id = "SLES-02906"
+players = 1
+exe = "disc/SLES_029.06"
+disc = "disc/Rayman 2 - The Great Escape (Europe) (En,Es,It).cue"
+discs = ["disc/Rayman 2 - The Great Escape (Europe) (En,Es,It).cue"]
+disc_serials = ["SLES-02906"]
+load_address = "0x801E4000"
+entry_pc = "0x801E99B4"
+text_size = "0x00011000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Rayman 2 - The Great Escape (Europe) (En,Es,It) (Track 1).bin"
+cue_name = "Rayman 2 - The Great Escape (Europe) (En,Es,It).cue"
+boot_exe = "SLES_029.06"
+known_sizes = [699734112]
+known_md5 = [
+  "0bac85a7c69a0951c85766dac5a5c23c",
+]
+known_sha1 = [
+  "671e7930dc4bbe52470e5711feb6f9d4f17ac259",
+]
+known_crc32 = [
+  "f475865e",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Rayman 2 - The Great Escape Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "8f441f5b663d777807b1f0278bc6326cf30c88ee654085aa338d28b953a1c324"
